@@ -27,6 +27,7 @@ def test_relu(a):
 
 
 @pytest.mark.task0_2
+@given(small_floats,small_floats)
 def test_symmetric(a,b):
     """
     Write a test that ensures that :func:`minitorch.operators.mul` is symmetric, i.e.
@@ -37,6 +38,7 @@ def test_symmetric(a,b):
 
 
 @pytest.mark.task0_2
+@given(small_floats,small_floats,small_floats)
 def test_distribute(a,b,c):
     r"""
     Write a test that ensures that your operators distribute, i.e.
@@ -46,6 +48,7 @@ def test_distribute(a,b,c):
 
 
 @pytest.mark.task0_2
+@given(small_floats)
 def test_other(a):
     """
     Write a test that ensures some other property holds for your functions.
